@@ -163,6 +163,21 @@ if (command === "gc4") {
   });
 
 
+client5.on('message', message => {
+  if(message.author.id !== "375385812860403724" )return;
+  const args = message.content.trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+if (command === "gc10") {
+  let credits = args[0]; 
+  message.channel.send(`#credits  <@375385812860403724> ${credits}`);
+  }
+  if (command === "say") {
+    let thingie = args[0]; 
+    message.channel.send(`${thingie}`);
+    }
+  });
+
+
 client.on('message', message => {
   if(message.author.id !== "375385812860403724" )return; // لا تغير شئ عشان ما تخرب الدنيا
 if (message.content === '!spam2') {
